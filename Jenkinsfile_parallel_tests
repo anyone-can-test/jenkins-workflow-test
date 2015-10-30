@@ -1,0 +1,26 @@
+echo 'hello from Workflow'
+
+stage 'build'
+node {
+  
+}
+
+
+stage 'QA'
+parallel(longerTests: {
+   runTests("HelloTest")
+}, quickerTests: {
+   runTests("SomeTest")
+})
+
+
+
+def runTests(testName) {
+   node {
+      git url: 'https://github.com/anyone-can-test/jenkins-workflow-test.git'
+      def mvnHome = tool 'Maven 3.x'
+      sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify -Dtest=${testName}"
+
+step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+  }
+}
