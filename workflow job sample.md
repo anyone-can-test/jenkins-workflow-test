@@ -1,4 +1,4 @@
-''' groovy
+'''
 
 echo 'hello from Workflow'
 
