@@ -1,3 +1,5 @@
+''' groovy
+
 echo 'hello from Workflow'
 
 node {
@@ -6,3 +8,5 @@ node {
   sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
   step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 }
+
+'''
