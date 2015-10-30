@@ -2,7 +2,7 @@
 // https://github.com/jenkinsci/workflow-plugin/blob/master/TUTORIAL.md
 
 { ->
-  node('special-slave') {
+  node() {
     hello 'world'
   }
 }
