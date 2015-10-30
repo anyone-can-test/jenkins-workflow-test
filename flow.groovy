@@ -1,5 +1,5 @@
 
-# https://github.com/jenkinsci/workflow-plugin/blob/master/TUTORIAL.md
+// https://github.com/jenkinsci/workflow-plugin/blob/master/TUTORIAL.md
 
 { ->
   node('special-slave') {
