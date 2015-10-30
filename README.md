@@ -13,3 +13,9 @@ Test 1
 
 Test 2
 - [jenkins job configuration] (flow.groovy)
+
+
+Test 3
+- Jenkinsfile 사용
+- [Jenkinsfile](Jenkinsfile)
+- [run parallel tests](Jenkinsfile_parallel_tests)
